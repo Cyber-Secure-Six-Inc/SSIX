@@ -195,7 +195,8 @@ const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "";
 
 const char* const SEED_NODES[] = {
   "ssix1.cybersecuresix.com:8200",
-  "ssix2.cybersecuresix.com:8200"
+  "ssix2.cybersecuresix.com:8200",
+  "bds.cybersecuresix.com:8200"
 };
 
 } // CryptoNote
