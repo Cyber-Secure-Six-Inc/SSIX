@@ -25,12 +25,12 @@
 namespace CryptoNote {
 namespace parameters {
 
-const uint64_t DIFFICULTY_TARGET                             = 240; // seconds
+const uint64_t DIFFICULTY_TARGET                             = 60; // seconds
 const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY             = 24 * 60 * 60 / DIFFICULTY_TARGET;
 const uint64_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 111;         // addresses start with "K"
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 150;         // addresses start with "S6"
 const uint64_t CRYPTONOTE_TX_PROOF_BASE58_PREFIX             = 3576968;     // (0x369488), starts with "Proof..."
 const uint64_t CRYPTONOTE_RESERVE_PROOF_BASE58_PREFIX        = 44907175188; // (0xa74ad1d14), starts with "RsrvPrf..."
 const uint64_t CRYPTONOTE_KEYS_SIGNATURE_BASE58_PREFIX       = 176103705;   // (0xa7f2119), starts with "SigV1..."
@@ -42,12 +42,12 @@ const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V1          = 11;
 
 // MONEY_SUPPLY - total number coins to be generated
-const uint64_t MONEY_SUPPLY                                  = UINT64_C(10000000000000000000);
-const uint64_t COIN                                          = UINT64_C(1000000000000);
-const uint64_t TAIL_EMISSION_REWARD                          = UINT64_C(1000000000000);
+const uint64_t MONEY_SUPPLY                                  = UINT64_C(12000000000);
+const uint64_t COIN                                          = UINT64_C(10);
+const uint64_t TAIL_EMISSION_REWARD                          = UINT64_C(10);
 const size_t CRYPTONOTE_COIN_VERSION                         = 1;
 
-const unsigned EMISSION_SPEED_FACTOR                         = 18;
+const unsigned EMISSION_SPEED_FACTOR                         = 21;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
@@ -57,14 +57,14 @@ const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2  = 1000000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 100000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE;
 const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
-const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 12;
+const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 2;
 
-const uint64_t MINIMUM_FEE_V1                                = UINT64_C(100000000);
-const uint64_t MINIMUM_FEE_V2                                = UINT64_C(100000000000);
+const uint64_t MINIMUM_FEE_V1                                = UINT64_C(1);
+const uint64_t MINIMUM_FEE_V2                                = UINT64_C(1);
 const uint64_t MINIMUM_FEE                                   = MINIMUM_FEE_V2;
-const uint64_t MAXIMUM_FEE                                   = UINT64_C(100000000000);
+const uint64_t MAXIMUM_FEE                                   = UINT64_C(10);
 
-const uint64_t DEFAULT_DUST_THRESHOLD                        = UINT64_C(100000000);
+const uint64_t DEFAULT_DUST_THRESHOLD                        = UINT64_C(1);
 const uint64_t MIN_TX_MIXIN_SIZE                             = 2;
 const uint64_t MAX_TX_MIXIN_SIZE                             = 20;
 const uint64_t MAX_EXTRA_SIZE                                = 1024;
@@ -124,10 +124,10 @@ const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.bin";
 const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json";
 } // parameters
 
-const char     CRYPTONOTE_NAME[]                             = "karbowanec";
-const char     CRYPTONOTE_TICKER[]                           = "KRB";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff0001fac484c69cd608029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101f904925cc23f86f9f3565188862275dc556a9bdfb6aec22c5aca7f0177c45ba8";
-const char     DNS_CHECKPOINTS_HOST[]                        = "checkpoints.karbo.org";
+const char     CRYPTONOTE_NAME[]                             = "SSIX";
+const char     CRYPTONOTE_TICKER[]                           = "SSIX";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "";
+const char     DNS_CHECKPOINTS_HOST[]                        = "checkpoints.cybersecuresix.com";
 
 const uint8_t  TRANSACTION_VERSION_1                         =  1;
 const uint8_t  TRANSACTION_VERSION_2                         =  2;
@@ -144,13 +144,13 @@ const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT        =  10000;  //by def
 const size_t   BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  128;    //by default, blocks count in blocks downloading
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
-const int      P2P_DEFAULT_PORT                              =  32347;
-const int      RPC_DEFAULT_PORT                              =  32348;
-const int      RPC_DEFAULT_SSL_PORT                          =  32448;
-const int      WALLET_RPC_DEFAULT_PORT                       =  15000;
-const int      WALLET_RPC_DEFAULT_SSL_PORT                   =  15100;
-const int      GATE_RPC_DEFAULT_PORT                         =  16000;
-const int      GATE_RPC_DEFAULT_SSL_PORT                     =  16100;
+const int      P2P_DEFAULT_PORT                              =  8200;
+const int      RPC_DEFAULT_PORT                              =  8201;
+const int      RPC_DEFAULT_SSL_PORT                          =  8243;
+const int      WALLET_RPC_DEFAULT_PORT                       =  8203;
+const int      WALLET_RPC_DEFAULT_SSL_PORT                   =  8244;
+const int      GATE_RPC_DEFAULT_PORT                         =  8254;
+const int      GATE_RPC_DEFAULT_SSL_PORT                     =  8255;
 const char     RPC_DEFAULT_CHAIN_FILE[]                      = "rpc_server.crt";
 const char     RPC_DEFAULT_KEY_FILE[]                        = "rpc_server.key";
 const char     RPC_DEFAULT_DH_FILE[]                         = "rpc_server.pem";
@@ -194,16 +194,8 @@ const uint32_t P2P_IDLE_CONNECTION_KILL_INTERVAL             = (5 * 60);      //
 const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "";
 
 const char* const SEED_NODES[] = {
-  "seed1.karbowanec.com:32347",
-  "seed2.karbowanec.com:32347",
-  "seed.karbo.cloud:32347",
-  "seed.karbo.org:32347",
-  "seed.karbo.io:32347",
-  "185.86.78.40:32347",
-  "108.61.198.115:32347",
-  "45.32.232.11:32347",
-  "46.149.182.151:32347",
-  "144.91.94.65:32347"
+  "ssix1.cybersecuresix.com:8200",
+  "ssix2.cybersecuresix.com:8200"
 };
 
 } // CryptoNote
