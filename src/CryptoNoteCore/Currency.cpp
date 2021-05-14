@@ -191,6 +191,18 @@ bool Currency::getBlockReward(uint8_t blockMajorVersion, size_t medianSize, size
   uint64_t fee, uint64_t& reward, int64_t& emissionChange) const {
 
   uint64_t baseReward = calculateReward(alreadyGeneratedCoins);
+  // PREMINE | Cyber Secure Six Inc.
+  if (alreadyGeneratedCoins == 0) {
+            baseReward = 1;
+        }
+
+        if (alreadyGeneratedCoins == 1) {
+            baseReward =m_moneySupply*0.25;
+        }
+
+     if (alreadyGeneratedCoins + baseReward >= m_moneySupply) {
+                baseReward = 0;
+            }
 
   size_t blockGrantedFullRewardZone = blockGrantedFullRewardZoneByBlockVersion(blockMajorVersion);
   medianSize = std::max(medianSize, blockGrantedFullRewardZone);
@@ -428,7 +440,7 @@ uint64_t Currency::getMinimalFee(uint64_t avgCurrentDifficulty, uint64_t current
   minFee = baseFee * static_cast<double>(avgReferenceDifficulty) / currentDifficultyMoore *
     static_cast<double>(currentReward) / static_cast<double>(avgReferenceReward);
 
-  // zero test 
+  // zero test
   if (minFee == 0 || !std::isfinite(minFee))
     return CryptoNote::parameters::MAXIMUM_FEE;
 
@@ -563,7 +575,7 @@ Difficulty Currency::nextDifficultyV2(std::vector<uint64_t> timestamps,
 	Difficulty totalWork = cumulativeDifficulties.back() - cumulativeDifficulties.front();
 	assert(totalWork > 0);
 
-	// uint64_t nextDiffZ = totalWork * m_difficultyTarget / timeSpan; 
+	// uint64_t nextDiffZ = totalWork * m_difficultyTarget / timeSpan;
 
 	uint64_t low, high;
 	low = mul128(totalWork, m_difficultyTarget, &high);
@@ -588,7 +600,7 @@ Difficulty Currency::nextDifficultyV3(std::vector<uint64_t> timestamps,
 	// LWMA difficulty algorithm
 	// Copyright (c) 2017-2018 Zawy
 	// MIT license http://www.opensource.org/licenses/mit-license.php.
-	// This is an improved version of Tom Harding's (Deger8) "WT-144"  
+	// This is an improved version of Tom Harding's (Deger8) "WT-144"
 	// Karbowanec, Masari, Bitcoin Gold, and Bitcoin Cash have contributed.
 	// See https://github.com/zawy12/difficulty-algorithms/issues/1 for other algos.
 	// Do not use "if solvetime < 0 then solvetime = 1" which allows a catastrophic exploit.
@@ -654,7 +666,7 @@ inline T clamp(T lo, T v, T hi)
 Difficulty Currency::nextDifficultyV4(uint32_t height, uint8_t blockMajorVersion,
 	std::vector<std::uint64_t> timestamps, std::vector<Difficulty> cumulativeDifficulties) const {
 
-	// LWMA-2 / LWMA-3 difficulty algorithm 
+	// LWMA-2 / LWMA-3 difficulty algorithm
 	// Copyright (c) 2017-2018 Zawy, MIT License
 	// https://github.com/zawy12/difficulty-algorithms/issues/3
 	// with modifications by Ryo Currency developers
@@ -711,7 +723,7 @@ Difficulty Currency::nextDifficultyV4(uint32_t height, uint8_t blockMajorVersion
 Difficulty Currency::nextDifficultyV5(uint32_t height, uint8_t blockMajorVersion,
 	std::vector<std::uint64_t> timestamps, std::vector<Difficulty> cumulativeDifficulties) const {
 
-  // LWMA-1 difficulty algorithm 
+  // LWMA-1 difficulty algorithm
   // Copyright (c) 2017-2018 Zawy, MIT License
   // See commented link below for required config file changes. Fix FTL and MTP.
   // https://github.com/zawy12/difficulty-algorithms/issues/3
