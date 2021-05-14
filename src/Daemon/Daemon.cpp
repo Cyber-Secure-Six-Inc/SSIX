@@ -189,7 +189,7 @@ int main(int argc, char* argv[])
 
     if (!r)
       return 1;
-  
+
     auto modulePath = Common::NativePathToGeneric(argv[0]);
     auto cfgLogFile = Common::NativePathToGeneric(command_line::get_arg(vm, arg_log_file));
 
@@ -211,15 +211,6 @@ int main(int argc, char* argv[])
     if (command_line_preprocessor(vm, logger)) {
       return 0;
     }
-
-    std::cout << ColouredMsg("\n"
-    "  _|    _|    _|_|    _|_|_|    _|_|_|      _|_|    \n"
-    "  _|  _|    _|    _|  _|    _|  _|    _|  _|    _|  \n"
-    "  _|_|      _|_|_|_|  _|_|_|    _|_|_|    _|    _|  \n",Common::Console::Color::BrightCyan);
-    std::cout << ColouredMsg(
-    "  _|  _|    _|    _|  _|    _|  _|    _|  _|    _|  \n"
-    "  _|    _|  _|    _|  _|    _|  _|    _|  _|    _|  \n"
-    "  _|    _|  _|    _|  _|    _|  _|_|_|      _|_|    \n\n", Common::Console::Color::BrightYellow);
 
     logger(INFO) << "Module folder: " << argv[0];
 

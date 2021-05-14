@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(Karbo)
+project(SSIX)
 
 # Required for finding Threads on ARM
 enable_language(C)
@@ -105,7 +105,7 @@ set(VERSION "${VERSION}")
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/src/version.h.in" "${CMAKE_CURRENT_BINARY_DIR}/version/version.h")
 add_custom_target(version ALL)
 
-include_directories(include src external "${CMAKE_CURRENT_BINARY_DIR}/version")  
+include_directories(include src external "${CMAKE_CURRENT_BINARY_DIR}/version")
 
 ## Platform specific code base information is applied here
 if(MSVC)
@@ -219,14 +219,14 @@ if(NOT MSVC)
   endif()
 
   if(ANDROID AND NOT IOS)
-    #From Android 5: "only position independent executables (PIE) are supported" 
+    #From Android 5: "only position independent executables (PIE) are supported"
     message(STATUS "Enabling PIE executable")
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIE")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIE")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIE -DANDROID -DBOOST_COROUTINES_NO_DEPRECATION_WARNING")
-    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_CXX_FLAGS} -fPIE -pie -ldl -pthread")	
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_CXX_FLAGS} -fPIE -pie -ldl -pthread")
   endif()
- 
+
   if (ANDROID OR IOS)
     add_definitions(-DFORCE_USE_HEAP=1)
   endif()
@@ -332,4 +332,3 @@ if(NOT MSVC)
   )
   set_directory_properties(PROPERTIES ADDITIONAL_MAKE_CLEAN_FILES "${PROJECT_BINARY_DIR}/rocksdb/librocksdb.a")
 endif()
-
