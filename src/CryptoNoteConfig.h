@@ -43,8 +43,8 @@ const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V1          = 11;
 
 // MONEY_SUPPLY - total number coins to be generated
 const uint64_t MONEY_SUPPLY                                  = UINT64_C(12000000000);
-const uint64_t COIN                                          = UINT64_C(10);
-const uint64_t TAIL_EMISSION_REWARD                          = UINT64_C(10);
+const uint64_t COIN                                          = UINT64_C(100);
+const uint64_t TAIL_EMISSION_REWARD                          = UINT64_C(100);
 const size_t CRYPTONOTE_COIN_VERSION                         = 1;
 
 const unsigned EMISSION_SPEED_FACTOR                         = 21;
@@ -59,10 +59,10 @@ const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BL
 const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
 const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 2;
 
-const uint64_t MINIMUM_FEE_V1                                = UINT64_C(100000000);
-const uint64_t MINIMUM_FEE_V2                                = UINT64_C(100000000000);
+const uint64_t MINIMUM_FEE_V1                                = UINT64_C(1);
+const uint64_t MINIMUM_FEE_V2                                = UINT64_C(100);
 const uint64_t MINIMUM_FEE                                   = MINIMUM_FEE_V2;
-const uint64_t MAXIMUM_FEE                                   = UINT64_C(100000000000);
+const uint64_t MAXIMUM_FEE                                   = UINT64_C(100);
 
 const uint64_t DEFAULT_DUST_THRESHOLD                        = UINT64_C(1);
 const uint64_t MIN_TX_MIXIN_SIZE                             = 2;
