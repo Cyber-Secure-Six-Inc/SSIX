@@ -1,6 +1,6 @@
 // Copyright (c) 2018, The TurtleCoin Developers
 // Copyright (c) 2018-2019, The Karbo Developers
-// 
+//
 // Please see the included LICENSE file for more information.
 
 #pragma once
@@ -11,10 +11,10 @@
 namespace WalletConfig
 {
     /* The prefix your coins address starts with */
-    const std::string addressPrefix = "K";
+    const std::string addressPrefix = "S6";
 
     /* Your coins 'Ticker', e.g. Monero = XMR, Bitcoin = BTC */
-    const std::string ticker = "KRB";
+    const std::string ticker = "SSIX";
 
     /* The filename to output the CSV to in save_csv */
     const std::string csvFilename = "transactions.csv";
@@ -24,7 +24,7 @@ namespace WalletConfig
     const std::string addressBookFilename = ".addressBook.json";
 
     /* The name of your deamon */
-    const std::string daemonName = "karbowanecd";
+    const std::string daemonName = "SSIXd";
 
     /* The name to call this wallet */
     const std::string walletName = "GreenWallet";
@@ -33,10 +33,10 @@ namespace WalletConfig
     const std::string walletdName = "walletd";
 
     /* The full name of your crypto */
-    const std::string coinName = "Karbo";
+    const std::string coinName = "SSIX";
 
     /* Where can your users contact you for support? E.g. discord */
-    const std::string contactLink = "https://t.me/karbowanec";
+    const std::string contactLink = "https://t.me/cybersecuresix";
 
     /* The number of decimals your coin has */
     const int numDecimalPlaces = CryptoNote::parameters
@@ -51,7 +51,7 @@ namespace WalletConfig
     const uint64_t defaultMixin = 5;
 
     /* The default fee value to use with transactions (in ATOMIC units!) */
-    const uint64_t defaultFee = CryptoNote::parameters::MINIMUM_FEE; 
+    const uint64_t defaultFee = CryptoNote::parameters::MINIMUM_FEE;
 
     /* The minimum fee value to allow with transactions (in ATOMIC units!) */
     const uint64_t minimumFee = CryptoNote::parameters::MINIMUM_FEE;
