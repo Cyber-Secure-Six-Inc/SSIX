@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2016 The Cryptonote developers
 // Copyright (c) 2014-2016 XDN developers
 // Copyright (c) 2006-2013 Andrey N.Sabelnikov, www.sabelnikov.net
-// Copyright (c) 2016-2019, The Karbo developers
+// Copyright (c) | 2020-2021 Cyber Secure Six Inc. | 2016 - 2019 The Karbo Developers
 // 
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
