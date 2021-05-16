@@ -2,7 +2,7 @@
 // Copyright(c) 2014 - 2017 XDN - project developers
 // Copyright (c) | 2020-2021 Cyber Secure Six Inc. | 2016 - 2019 The Karbo Developers
 //
-// This file is part of Karbo.
+// This file is part of SSIX.
 //
 // Karbo is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by

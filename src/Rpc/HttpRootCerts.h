@@ -1,5 +1,5 @@
 
-// This file is part of Karbo.
+// This file is part of SSIX.
 //
 // Bundle of CA Root Certificates
 // Certificate data from Mozilla as of: Wed Oct 16 03:12:09 2019 GMT

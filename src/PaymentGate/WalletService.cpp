@@ -3,7 +3,7 @@
 // Copyright (c) 2018-2019 The Cash2 developers
 // Copyright (c) 2016-2020, Karbo developers
 //
-// This file is part of Karbo.
+// This file is part of SSIX.
 //
 // Karbo is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published by
