@@ -126,7 +126,7 @@ const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json"
 
 const char     CRYPTONOTE_NAME[]                             = "SSIX";
 const char     CRYPTONOTE_TICKER[]                           = "SSIX";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff000101029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210105696632c237dcd84fe3ac5a794a8b9b5b809e4d1bdf396778aa29d03a91c7e7";
 const char     DNS_CHECKPOINTS_HOST[]                        = "checkpoints.cybersecuresix.com";
 
 const uint8_t  TRANSACTION_VERSION_1                         =  1;
