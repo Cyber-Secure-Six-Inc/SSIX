@@ -14,13 +14,13 @@ All you need to know to build the Cyber Secure Six (SSIX) cryptocurrency on vari
    **Environment Setup**
    
 -   `sudo apt-get update`
--   `sudo apt-get -y install build-essential python3-dev gcc-7 g++-7 git cmake libboost1.67-all-dev libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev liblz4-dev libzstd-dev`
+-   `sudo apt-get -y install build-essential python3-dev gcc-7 g++-7 git cmake libboost-all-dev libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev liblz4-dev libzstd-dev`
 -   `sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 70`
 -   `sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 70`
 
 **One liner environment setup:** 
 
-    sudo apt-get update && sudo apt-get -y install build-essential python3-dev gcc-7 g++-7 git cmake libboost1.67-all-dev libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev liblz4-dev libzstd-dev && sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 70 && sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 70 
+    sudo apt-get update && sudo apt-get -y install build-essential python3-dev gcc-7 g++-7 git cmake libboost-all-dev libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev liblz4-dev libzstd-dev && sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 70 && sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 70 
 
 **Building:**
 
@@ -48,7 +48,7 @@ All you need to know to build the Cyber Secure Six (SSIX) cryptocurrency on vari
 **Building:**
 Adapt commands as required. A build usually goes as follows:
 - Run `x64 Native Tools Command Prompt for VS2017` from Start Menu
-- `cd` into your clone of the repository i.e: `C:/Users/%USERPROFILE%/Documents/GitHub/SSIX`
+- `cd` into your clone of the repository i.e: `%USERPROFILE%/Documents/GitHub/SSIX`
 - `md build && cd build`
 - `set PATH="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin";%PATH%`
 - `cmake -DBOOST_ROOT=C:\local\boost_1_71_0 -DBOOST_LIBRARYDIR=C:\local\boost_1_71_0\lib64-msvc-14.1 -G "Visual Studio 14 Win64" ..`
