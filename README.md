@@ -14,13 +14,13 @@ All you need to know to build the Cyber Secure Six (SSIX) cryptocurrency on vari
    **Environment Setup**
    
 -   `sudo apt-get update`
--   `sudo apt-get -y install build-essential python3-dev gcc-7 g++-7 git cmake libboost1.67-all-dev libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev liblz4-dev libzstd-dev`
+-   `sudo apt-get -y install build-essential python3-dev gcc-7 g++-7 git cmake libboost-all-dev libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev liblz4-dev libzstd-dev`
 -   `sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 70`
 -   `sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 70`
 
 **One liner environment setup:** 
 
-    sudo apt-get update && sudo apt-get -y install build-essential python3-dev gcc-7 g++-7 git cmake libboost1.67-all-dev libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev liblz4-dev libzstd-dev && sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 70 && sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 70 
+    sudo apt-get update && sudo apt-get -y install build-essential python3-dev gcc-7 g++-7 git cmake libboost-all-dev libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev liblz4-dev libzstd-dev && sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 70 && sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 70 
 
 **Building:**
 
