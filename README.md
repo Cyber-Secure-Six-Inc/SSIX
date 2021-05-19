@@ -1,112 +1,77 @@
-![Build check](https://github.com/Karbovanets/karbo/workflows/Build%20check/badge.svg)
+# Cyber Secure Six | SSIX
 
-This is the alternative version of Karbo codebase, compatible on P2P layer, however Karbo 1 wallets are incompatible with Karbo 2 nodes (built from this repo) and vice versa. In other words don't use Karbo node v. 2.\*.\* in wallets v. 1.\*.\* and Karbo nodes v. 1.\*.\* in wallets v. 2.\*.\*.
+![enter image description here](https://uploads-ssl.webflow.com/605a69054a6f3bc14b61c508/609532f31223b84ac6db9ecc_Cyber%20Secure%20Six.png)
 
-The Karbo (Karbovanets) is cryptocurrency of Ukrainian origin, just like Bitcoin but more anonymous and privacy centric with opaque and more analysis resistant blockchain. It is people's electronic cash, not connected to government or officials.
+The Secure Six Currency and community is our attempt at creating a global movement behind privacy and security and to provide the means to achieve our goal for the common good.
 
-## Building Karbo 
+# SSIX Developer Usage Guide
 
-### On *nix
+All you need to know to build the Cyber Secure Six (SSIX) cryptocurrency on various supported platforms.
 
-Dependencies: GCC 4.7.3 or later, CMake 2.8.6 or later, and Boost 1.55 or later.
+## Linux | Ubuntu 20.04
 
-You may download them from:
+   You will need the following packages: boost (1.67), cmake, git, gcc (7.x), g++ (7.x), make, and python3.
+   **Environment Setup**
+   
+-   `sudo apt-get update`
+-   `sudo apt-get -y install build-essential python3-dev gcc-7 g++-7 git cmake libboost1.67-all-dev libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev liblz4-dev libzstd-dev`
+-   `sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 70`
+-   `sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 70`
 
-- http://gcc.gnu.org/
-- http://www.cmake.org/
-- http://www.boost.org/
+**One liner environment setup:** 
 
-Alternatively, it may be possible to install them using a package manager.
+    sudo apt-get update && sudo apt-get -y install build-essential python3-dev gcc-7 g++-7 git cmake libboost1.67-all-dev libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev liblz4-dev libzstd-dev && sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 70 && sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 70 
 
-To build, change to a directory where this file is located, and run `make`.
+**Building:**
 
-or
+-   `git clone https://github.com/Cyber-Secure-Six-Inc/SSIX.git`
+-   `cd SSIX`
+-   `rm -rf build; mkdir -p build/release; cd build/release`
+-   `cmake -D STATIC=ON -D ARCH="default" -D CMAKE_BUILD_TYPE=Release ../..`
+-   `cmake --build . -j 4`
 
-Run these commands:
-```
-cd ~
-sudo apt-get install build-essential git cmake libboost-all-dev
-git clone https://github.com/seredat/karbowanec.git
-cd karbowanec
-mkdir build
-cd build
-cmake ..
-cd ..
-make
-```
+**Tip:** the `--j 4` in the last command `cmake --build . -j 4` is the numbers of CPU threads to be used by the compiler to build the SSIX binaries. Adapt to your system configuration as needed. 
 
- The resulting executables can be found in `build/release/src`.
+**One liner build command to run compilation of binaries with 4 threads:**
 
-**Advanced options:**
-
-* Parallel build: run `make -j<number of threads>` instead of `make`.
-* Debug build: run `make build-debug`.
-* Test suite: run `make test-release` to run tests in addition to building. Running `make test-debug` will do the same to the debug version.
-* Building with Clang: it may be possible to use Clang instead of GCC, but this may not work everywhere. To build, run `export CC=clang CXX=clang++` before running `make`.
-
-### On Windows
-Dependencies: MSVC 2013 or later, CMake 2.8.6 or later, and Boost 1.55. You may download them from:
-
-* http://www.microsoft.com/
-* http://www.cmake.org/
-* http://www.boost.org/
-
-To build, change to a directory where this file is located, and run theas commands: 
-```
-mkdir build
-cd build
-cmake -G "Visual Studio 15 Win64" ..
-```
-
-And then do Build.
-Good luck!
+    git clone https://github.com/Cyber-Secure-Six-Inc/SSIX.git  && cd SSIX && rm -rf build; mkdir -p build/release; cd build/release && cmake -D STATIC=ON -D ARCH="default" -D CMAKE_BUILD_TYPE=Release ../.. &&  cmake --build . -j 4
 
 
-### Building for macOS
+## Windows
+**Environment Setup:**
+-   Install [Visual Studio 2017 Community Edition](https://my.visualstudio.com/Downloads?q=Visual%20Studio%202017)
+-   Along with Visual Studio 15.9, it is **required** that you install **Desktop development with C++** and the **VC++ v141 toolchain** when selecting features.
+- [Boost 1.71.0](https://sourceforge.net/projects/boost/files/boost-binaries/1.71.0/) for MSVC 14.1 x64
 
-Dependencies: cmake boost and Xcode
+**DO NOT CHANGE BOOST INSTALL DIRECTORIES!**
 
-Download Xcode from the App store and the Xcode command line tools with `xcode-select --install`
-For the other we recommand you to use [Homebrew](https://brew.sh)
-
-Continue with:
-```
-brew install git cmake boost
-git clone https://github.com/seredat/karbowanec.git
-cd karbowanec
-cd build
-cmake ..
-make
-```
+**Building:**
+Adapt commands as required. A build usually goes as follows:
+- Run `x64 Native Tools Command Prompt for VS2017` from Start Menu
+- `cd` into your clone of the repository i.e: `C:/Users/%USERPROFILE%/Documents/GitHub/SSIX`
+- `md build && cd build`
+- `set PATH="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin";%PATH%`
+- `cmake -DBOOST_ROOT=C:\local\boost_1_71_0 -DBOOST_LIBRARYDIR=C:\local\boost_1_71_0\lib64-msvc-14.1 -G "Visual Studio 14 Win64" ..`
+- Open the `SSIX.sln` in Visual Studio 2017 in `build` directory, ensure the Solution Configuration is `Release x64` at the top and hit `Ctrl+Shift+B` to build the binaries. 
+- Compiled binaries can be found in `build/src/Release`
 
 
-### Building for Android on Linux
 
-Set up the 32 bit toolchain
-Download and extract the Android SDK and NDK
-```
-android-ndk-r15c/build/tools/make_standalone_toolchain.py --api 21 --stl=libc++ --arch arm --install-dir /opt/android/tool32
-```
+## Binaries
 
-Download and setup the Boost 1.65.1 source
-```
-wget https://sourceforge.net/projects/boost/files/boost/1.65.1/boost_1_65_1.tar.bz2/download -O boost_1_65_1.tar.bz2
-tar xjf boost_1_65_1.tar.bz2
-cd boost_1_65_1
-./bootstrap.sh
-```
-apply patch from external/boost1_65_1/libs/filesystem/src
+The SSIX binaries created by the compiler configuration present in this repositories are as follows:
 
-Build Boost with the 32 bit toolchain
-```
-export PATH=/opt/android/tool32/arm-linux-androideabi/bin:/opt/android/tool32/bin:$PATH
-./b2 abi=aapcs architecture=arm binary-format=elf address-model=32 link=static runtime-link=static --with-chrono --with-date_time --with-filesystem --with-program_options --with-regex --with-serialization --with-system --with-thread --with-context --with-coroutine --with-atomic --build-dir=android32 --stagedir=android32 toolset=clang threading=multi threadapi=pthread target-os=android --reconfigure stage
-```
+|                |Command|Usage|
+|----------------|-------------------------------|-----------------------------|
+|SSIXd|`SSIXd`|Daemon used for connection to network. Required to use anything relating to the SSIX network.|
+|Simplewallet|`simplewallet`|Simple command line wallet to transact over the SSIX network.|
+|Wallet Daemon|`walletd`|Wallet daemon used for anything that needs the Wallet RPC API such as running a mining pool.|
 
-Build Karbo for 32 bit Android
-```
-mkdir -p build/release.android32
-cd build/release.android32
-CC=clang CXX=clang++ cmake -D BUILD_TESTS=OFF -D ARCH="armv7-a" -ldl -D STATIC=ON -D BUILD_64=OFF -D CMAKE_BUILD_TYPE=release -D ANDROID=true -D BUILD_TAG="android" -D BOOST_ROOT=/opt/android/boost_1_65_1 -D BOOST_LIBRARYDIR=/opt/android/boost_1_65_1/android32/lib -D CMAKE_POSITION_INDEPENDENT_CODE:BOOL=true -D BOOST_IGNORE_SYSTEM_PATHS_DEFAULT=ON ../..
-make SimpleWallet
-```
+
+
+## Credits
+Cyber Secure Six aims to build a community around the development of a Cryptonote protocol currency where the code is maintained and kept updated so everyone can benefit and build on top of what has already been done. It was very challenging to make the original 2012 era Cryptonote protocol workable in 2021. The SSIX master branch is a fork of  the Talleo Project by 
+ Mika Lindqvist. Improvements to Talleo's upstream code are candidates for potential improvements to the SSIX network. We hope to contribute back into the Talleo Project as we would not be as far along as we currently are without it.
+
+The SSIX cryptocurrency would not be possible without the contributions of the Cryptonote Developers, Bytecoin Developers, Monero Developers, TurtleCoin Developers, Forknote Project, PinkstarcoinV2 Developers, Bittorium Developers, Talleo developers and of course, our own development team!
+
