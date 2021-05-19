@@ -48,7 +48,7 @@ All you need to know to build the Cyber Secure Six (SSIX) cryptocurrency on vari
 **Building:**
 Adapt commands as required. A build usually goes as follows:
 - Run `x64 Native Tools Command Prompt for VS2017` from Start Menu
-- `cd` into your clone of the repository i.e: `C:/Users/%USERPROFILE%/Documents/GitHub/SSIX`
+- `cd` into your clone of the repository i.e: `%USERPROFILE%/Documents/GitHub/SSIX`
 - `md build && cd build`
 - `set PATH="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin";%PATH%`
 - `cmake -DBOOST_ROOT=C:\local\boost_1_71_0 -DBOOST_LIBRARYDIR=C:\local\boost_1_71_0\lib64-msvc-14.1 -G "Visual Studio 14 Win64" ..`
