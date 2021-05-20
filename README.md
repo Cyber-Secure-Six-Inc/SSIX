@@ -70,8 +70,7 @@ The SSIX binaries created by the compiler configuration present in this reposito
 
 
 ## Credits
-Cyber Secure Six aims to build a community around the development of a Cryptonote protocol currency where the code is maintained and kept updated so everyone can benefit and build on top of what has already been done. It was very challenging to make the original 2012 era Cryptonote protocol workable in 2021. The SSIX master branch is a fork of  the Talleo Project by 
- Mika Lindqvist. Improvements to Talleo's upstream code are candidates for potential improvements to the SSIX network. We hope to contribute back into the Talleo Project as we would not be as far along as we currently are without it.
+Cyber Secure Six aims to build a community around the development of a Cryptonote protocol currency where the code is maintained and kept updated so everyone can benefit and build on top of what has already been done. It was very challenging to make the original 2012 era Cryptonote protocol workable in 2021. The SSIX master branch is a fork of  the Karbovanets Project. Improvements to Karbo's upstream code are candidates for potential improvements to the SSIX network. We hope to contribute back into the Karbo Project as we would not be as far along as we currently are without it.
 
-The SSIX cryptocurrency would not be possible without the contributions of the Cryptonote Developers, Bytecoin Developers, Monero Developers, TurtleCoin Developers, Forknote Project, PinkstarcoinV2 Developers, Bittorium Developers, Talleo developers and of course, our own development team!
+The SSIX cryptocurrency would not be possible without the contributions of the Cryptonote Developers, Bytecoin Developers, Monero Developers, TurtleCoin Developers, Forknote Project, PinkstarcoinV2 Developers, Bittorium Developers, Talleo developers, Karbovanets Developers and of course, our own development team!
 
