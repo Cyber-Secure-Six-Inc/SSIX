@@ -34,7 +34,7 @@ All you need to know to build the Cyber Secure Six (SSIX) cryptocurrency on vari
 
 **One liner build command to run compilation of binaries with 4 threads:**
 
-    git clone https://github.com/Cyber-Secure-Six-Inc/SSIX.git  && cd SSIX && rm -rf build; mkdir -p build/release; cd build/release && cmake -D STATIC=ON -D ARCH="default" -D CMAKE_BUILD_TYPE=Release ../.. &&  cmake --build . -j 4
+    git clone https://github.com/Cyber-Secure-Six-Inc/SSIX.git  && cd SSIX && rm -rf build; mkdir -p build/release; cd build/release && cmake -D STATIC=ON -D ARCH="default" -D CMAKE_BUILD_TYPE=Release ../.. &&  cmake --build . -j$(nproc)
 
 
 ## Windows
