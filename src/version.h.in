@@ -1,9 +1,9 @@
 #define STR_HELPER(x) #x
 #define STR(x) STR_HELPER(x)
 
-#define PROJECT_NAME "Karbo"
-#define PROJECT_SITE "https://www.karbo.org"
-#define PROJECT_COPYRIGHT "Copyright 2016-2020, Karbo Developers"
+#define PROJECT_NAME "SSIX"
+#define PROJECT_SITE "https://cybersecuresix.com"
+#define PROJECT_COPYRIGHT "Copyright 2020-2021, Cyber Secure Six Inc."
 #define APP_VER_MAJOR @PROJECT_VERSION_MAJOR@
 #define APP_VER_MINOR @PROJECT_VERSION_MINOR@
 #define APP_VER_REV   @PROJECT_VERSION_PATCH@
